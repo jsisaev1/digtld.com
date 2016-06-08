@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="digtld.com:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/digtld_com_war</output-path>
+    <root id="archive" name="digtld.com_war.war">
+      <element id="artifact" artifact-name="digtld.com:war exploded" />
+    </root>
+  </artifact>
+</component>
