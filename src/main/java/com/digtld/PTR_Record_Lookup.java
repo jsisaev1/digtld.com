@@ -9,8 +9,8 @@ import java.net.InetAddress;
 public class PTR_Record_Lookup {
     private String _domain;
 
-    public PTR_Record_Lookup(String domain) {
-        _domain = domain;
+    public PTR_Record_Lookup(String ptrrec) {
+        _domain = ptrrec;
     }
 
     public String lookup() throws TextParseException {
@@ -19,9 +19,9 @@ public class PTR_Record_Lookup {
             String output = "";
             for (int i = 0; i < records.length; i++) {
                 PTRRecord ptrrecord = (PTRRecord) records[i];
-                output += "Host " + ptrrecord.toString();
+                output +=  ptrrecord.toString();
             }
             return output;
-        } catch (final Exception e) { return "Host unreachable";}
+        } catch (final Exception e) { return "Not found";}
     }
 }

@@ -7,8 +7,8 @@ import org.xbill.DNS.*;
 public class AAAA_Lookup {
     private String _domain;
 
-    public AAAA_Lookup(String domain) {
-        _domain = domain;
+    public AAAA_Lookup(String ipv66) {
+        _domain = ipv66;
     }
 
     public String lookup() throws TextParseException {
@@ -17,10 +17,10 @@ public class AAAA_Lookup {
             String output = "";
             for (int i = 0; i < records.length; i++) {
                 AAAARecord aaaarec = (AAAARecord) records[i];
-                output += "Host " + aaaarec.toString();
+                output +=  aaaarec.toString();
             }
             return output;
-        } catch (final Exception e) { return "Host unreachable";}
+        } catch (final Exception e) { return "Not found";}
     }
 }
 

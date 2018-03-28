@@ -7,8 +7,8 @@ import org.xbill.DNS.*;
 public class SOA_LookUp {
     private String _domain;
 
-    public SOA_LookUp(String domain) {
-        _domain = domain;
+    public SOA_LookUp(String soarec) {
+        _domain = soarec;
     }
 
     public String lookup() throws TextParseException {
@@ -17,9 +17,9 @@ public class SOA_LookUp {
             String output = "";
             for (int i = 0; i < records.length; i++) {
                 SOARecord soaRecord = (SOARecord) records[i];
-                output += "Host " + soaRecord.toString();
+                output += soaRecord.toString();
             }
             return output;
-        } catch (final Exception e) { return "Host unreachable";}
+        } catch (final Exception e) { return "Not found";}
     }
 }

@@ -43,6 +43,20 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-net">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-net-3.31.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$MODULE_DIR$/lib/commons-net-3.3-javadoc1.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/lib/commons-net-3.3-sources1.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="commons-net:commons-net:3.3" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.6.RELEASE" level="project" />
@@ -61,5 +75,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-net:commons-net:3.3" level="project" />
   </component>
 </module>

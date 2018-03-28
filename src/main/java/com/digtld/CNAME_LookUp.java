@@ -8,8 +8,8 @@ import org.xbill.DNS.*;
 public class CNAME_LookUp {
     private String _domain;
 
-    public CNAME_LookUp(String domain) {
-        _domain = domain;
+    public CNAME_LookUp(String cname) {
+        _domain = cname;
     }
 
     public String lookup() throws TextParseException {
@@ -18,9 +18,9 @@ public class CNAME_LookUp {
             String output = "";
             for (int i = 0; i < records.length; i++) {
                 CNAMERecord cnameRecord = (CNAMERecord) records[i];
-                output += "Host " + cnameRecord.toString();
+                output +=  cnameRecord.toString();
             }
             return output;
-        } catch (final Exception e) { return "Host unreachable";}
+        } catch (final Exception e) { return "Not found";}
     }
 }

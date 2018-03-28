@@ -8,8 +8,8 @@ import org.xbill.DNS.*;
 public class SRV_LookUp {
     private String _domain;
 
-    public SRV_LookUp(String domain) {
-        _domain = domain;
+    public SRV_LookUp(String srvrec) {
+        _domain = srvrec;
     }
 
     public String lookup() throws TextParseException {
@@ -18,10 +18,10 @@ public class SRV_LookUp {
             String output = "";
             for (int i = 0; i < records.length; i++) {
                 SOARecord soaRecord = (SOARecord) records[i];
-                output += "Host " + soaRecord.toString();
+                output += soaRecord.toString();
             }
             return output;
-        } catch (final Exception e) { return "Host unreachable";}
+        } catch (final Exception e) { return "Not found";}
     }
 
 }

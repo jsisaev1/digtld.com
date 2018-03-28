@@ -3,6 +3,13 @@
     <output-path>$PROJECT_DIR$/out/artifacts/digtld_com_war</output-path>
     <root id="archive" name="digtld.com_war.war">
       <element id="artifact" artifact-name="digtld.com:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-net:commons-net:3.3" />
+          <element id="library" level="module" name="commons-net" module-name="digtld.com" />
+          <element id="library" level="project" name="org.webjars.npm:punycode:1.3.2" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
